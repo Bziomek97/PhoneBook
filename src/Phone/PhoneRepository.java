@@ -19,6 +19,7 @@ public class PhoneRepository extends Name{
         PhoneCheck check = new PhoneCheck();
         Set<String> keys = this.numbers.keySet();
         for (String key : keys) {
+            if (name.getName().equals(key)) continue;
             if (check.check(number, this.numbers.get(key))) {
                 System.err.println("Taki numer istnieje w bazie!");
                 return;
