@@ -15,15 +15,13 @@ public class PhoneRepository extends Name{
     }
 
     public void addNumber(Name name,PhoneNumber number) {
-        //Sprawdzenie numeru
-        if(!this.numbers.containsKey(name.getName())) {
-            PhoneCheck check = new PhoneCheck();
-            Set<String> keys = this.numbers.keySet();
-            for (String key : keys) {
-                if (check.check(number, this.numbers.get(key))) {
-                    System.err.println("Taki numer istnieje w bazie!");
-                    return;
-                }
+
+        PhoneCheck check = new PhoneCheck();
+        Set<String> keys = this.numbers.keySet();
+        for (String key : keys) {
+            if (check.check(number, this.numbers.get(key))) {
+                System.err.println("Taki numer istnieje w bazie!");
+                return;
             }
         }
 

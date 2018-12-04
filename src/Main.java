@@ -20,7 +20,7 @@ public class Main {
         nowak.addNumber(krzys,n2);
         nowak.addNumber(julka,n3);
         nowak.addNumber(krzys,n4);
-        nowak.addNumber(julka,n1);
+        nowak.addNumber(krzys,n1);
 
         output(nowak,julka);
         output(nowak,krzys);
